@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OKR 목표 관리 대시보드</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- 왼쪽 사이드바 -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">📋</div>
+                <span class="logo-text">OKR Dashboard</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">
+                    <span class="nav-icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📁</span>
+                    <span>Projects</span>
+                    <span class="badge">2</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- 메인 콘텐츠 영역 -->
+        <main class="main-content">
+            <div class="content-header">
+                <div class="header-text">
+                    <h1>Hi, User</h1>
+                    <p>Let's finish your task today!</p>
+                </div>
+                <div class="header-actions">
+                    <button class="notification-btn">🔔</button>
+                </div>
+            </div>
+
+            <div class="section-header">
+                <div>
+                    <h2>Today Task</h2>
+                    <p>Check your daily tasks and schedules</p>
+                </div>
+                <button class="btn-schedule">Today's schedule</button>
+            </div>
+
+            <!-- 목표 추가 섹션 -->
+            <div class="add-objective-card">
+                <input 
+                    type="text" 
+                    id="objectiveInput" 
+                    placeholder="새로운 목표를 입력하세요..."
+                    class="objective-input"
+                >
+                <input 
+                    type="date" 
+                    id="deadlineInput" 
+                    class="deadline-input"
+                    title="마감일"
+                >
+                <button id="addObjectiveBtn" class="btn-primary">목표 추가</button>
+            </div>
+
+            <!-- 목표 카드들 -->
+            <div id="objectivesContainer" class="objectives-grid">
+                <!-- 목표 카드들이 여기에 동적으로 추가됩니다 -->
+            </div>
+
+            <!-- Tasks Progress 그래프 -->
+            <div class="progress-chart-section">
+                <h3>Tasks Progress</h3>
+                <div class="chart-container">
+                    <div class="chart-bars" id="progressChart">
+                        <!-- 그래프가 여기에 동적으로 생성됩니다 -->
+                    </div>
+                    <div class="chart-labels">
+                        <span>Mon</span>
+                        <span>Tue</span>
+                        <span>Wed</span>
+                        <span>Thu</span>
+                        <span>Fri</span>
+                        <span>Sat</span>
+                        <span>Sun</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
